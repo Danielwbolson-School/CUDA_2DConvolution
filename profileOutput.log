@@ -1,0 +1,19 @@
+==53221== NVPROF is profiling process 53221, command: ./2Dconvolution test/size1.txt test/kernel.in test/image1.in
+==53221== Profiling application: ./2Dconvolution test/size1.txt test/kernel.in test/image1.in
+==53221== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   97.94%  296.42us         1  296.42us  296.42us  296.42us  ConvolutionKernel(Matrix, Matrix)
+                    2.06%  6.2400us         3  2.0800us  1.8560us  2.3040us  [CUDA memcpy HtoD]
+      API calls:   99.00%  356.87ms         1  356.87ms  356.87ms  356.87ms  cudaMemcpyToSymbol
+                    0.38%  1.3723ms         1  1.3723ms  1.3723ms  1.3723ms  cuDeviceGetName
+                    0.24%  847.97us        97  8.7410us     331ns  389.55us  cuDeviceGetAttribute
+                    0.18%  637.07us         1  637.07us  637.07us  637.07us  cuDeviceTotalMem
+                    0.08%  292.46us         1  292.46us  292.46us  292.46us  cudaDeviceSynchronize
+                    0.08%  281.15us         2  140.58us  14.416us  266.74us  cudaMalloc
+                    0.02%  86.194us         1  86.194us  86.194us  86.194us  cudaLaunchKernel
+                    0.02%  54.676us         2  27.338us  18.327us  36.349us  cudaMemcpy
+                    0.01%  20.308us         1  20.308us  20.308us  20.308us  cuDeviceGetPCIBusId
+                    0.00%  14.160us         1  14.160us  14.160us  14.160us  cudaProfilerStart
+                    0.00%  4.2690us         3  1.4230us     369ns  3.1630us  cuDeviceGetCount
+                    0.00%  1.7360us         2     868ns     393ns  1.3430us  cuDeviceGet
+                    0.00%     514ns         1     514ns     514ns     514ns  cuDeviceGetUuid
